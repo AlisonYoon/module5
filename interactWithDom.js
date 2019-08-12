@@ -26,3 +26,13 @@ var contactUs = document.getElementById('contact-us')
 var example = '<p>This is coming from javascript</p>'
 contactUs.innerHTML += example
 //we don't use innerHTML when something could actually change the page structure, and when that something comes from the user
+
+contactUs.dataset.name = 'Bob'    // this saves 'Bob' in the data-name inside html tag as a short-term storage. => <div id="contact-us" data-name="Bob">
+contactUs.dataset.height = 'Bob'
+document.getElementById('contact-us').dataset.name = 'Bob'   // you can do this as well instead of creating a var to do it.
+
+if(contactUs.dataset.name === 'Bob') {   // you can use this data-name in a conditional like this.
+    //do something
+}
+
+
