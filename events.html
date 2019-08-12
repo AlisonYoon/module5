@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Listener</title>
+    <style>
+        div {
+            background: blue;
+            width: 200px;
+            height: 200px;
+        }
+        .second-color {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="blue-rectangle"></div>
+<button id="click-me">click me</button>
+
+</body>
+<script>
+
+    var rectangle = document.getElementById('blue-rectangle')
+
+    document.querySelector("#click-me").addEventListener('click', function() {
+        rectangle.className = "second-color"
+    })
+
+    var event = new CustomEvent(
+        'timeranout', {
+            bubbles: true,   // if bubbles: true then it will bubble and record its parents element event as well
+            cancelable: true,
+            detail: {
+
+            }
+        }
+    )
+
+    document.dispatchEvent(event)   // dispatchEvent is for CustomEvent
+
+</script>
+</html>
