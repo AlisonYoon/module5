@@ -7,3 +7,10 @@
 //     Each function creates its own scope, also it inherits its parent's scope
 //     Each function gets access to their parent's scope
 
+var someText = 'ooo'
+
+function doThing() {
+    console.log(someText)
+}
+
+doThing()
