@@ -9,3 +9,19 @@ var boblin = 'bobling'
 //4. Range error :  if you try to use number that's too big for javascript
 //5. Eval error : eval() method error. but don't use eval() method anyway.
 //6. URI error : encodeURI() global function error. encodeURI(thing)   -> for example, space in string changed to '%20'
+
+
+var aThing = 'asdf'
+
+try {
+    //do something with aThing
+} catch(e) {
+    //deal with the error e
+} finally {
+    // this runs regardless of whether there's an error or not, no one really uses this though
+}
+
+//without try catch, with just one error, entire code won't work but with try catch,
+//it knows how to deal with an error when it happens and the rest of the code still works fine.
+//things that is core in your program doesn't need to go into try catch because if this fails, there's no use of running rest of the code.
+
