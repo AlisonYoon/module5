@@ -40,3 +40,18 @@ function changeName(people) {
 }
 var alteredStudents = changeName(people)    // and call it this way, assign it to a var
 console.log(alteredStudents)
+
+
+
+// Another way to create function : Anonymous function
+
+var square = function(number) {
+    if(typeof number !== 'number') {
+        return "That ain't right"
+    } else {
+        return number * number
+    }
+}
+
+console.log(square(4))
+
