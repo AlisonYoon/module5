@@ -32,7 +32,7 @@ div {
     document.getElementById('fetch-data').addEventListener('click', function(){
         var http = new XMLHttpRequest()
         // configuration
-        http.open('GET','https://jsonplaceholder.typicode.com/todos/1', true)  //first is what type of HTTP request we want, second is url, third is asynchronous true or false
+        http.open('GET','https://jsonplaceholder.typicode.com/todos/1', true)  //first is what type of HTTP request we want, second is url(or local file path), third is asynchronous true or false
 
         // what to do when we get stuff back
         http.onreadystatechange = function() {    // onreadystatechange is not camel cased. on ready state change, run this function. Here readyState must set to 4, and status must set to 200.
