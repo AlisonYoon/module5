@@ -33,3 +33,10 @@ function changeName(people) {
 }
 changeName(people)
 console.log(students)  // now array changed
+
+function changeName(people) {
+    people[0] = 'Felix'
+    return people     // or return it
+}
+var alteredStudents = changeName(people)    // and call it this way, assign it to a var
+console.log(alteredStudents)
