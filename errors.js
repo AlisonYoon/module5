@@ -24,6 +24,7 @@ try {
 //without try catch, with just one error, entire code won't work but with try catch,
 //it knows how to deal with an error when it happens and the rest of the code still works fine.
 //things that is core in your program doesn't need to go into try catch because if this fails, there's no use of running rest of the code.
+//try and catch could be used for form validation-anything that involves with user interaction.
 
 var people = ['mike', 'Homer', 'charlie']
 
@@ -31,6 +32,9 @@ try {
     console.log(checkForHomers(people))
 } catch (e) {
     console.log(e)
+    //record the current state of the application
+    // put that information into a logging system
+    // email devs if the error is severe
 }
 
 function checkForHomers(applicants){
@@ -39,6 +43,7 @@ function checkForHomers(applicants){
         if(applicant === 'Homer') {
             //applicationSuccessful = false
             throw new Error('Homer detected')
+            //throw 'Homer detected'   -> you can just throw a string like this as well, but it wouldn't give you stack of errors in the console so it's harder to detect the error
         }
     })
     return applicationSuccessful
