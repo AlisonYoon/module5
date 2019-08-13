@@ -30,3 +30,13 @@ doThing(someText)
 //render blocking - js file link is at the bottom of the HTML file, because while browser makes request for JS file, HTML rendering stops,
 // in order to prevent this, place js file link at the bottom of the HTML file. Also, if js file does any DOM manipulation,
 // if element it's manipulating doesn't exist yet, it will complain and throws an error
+
+
+var boblin      // hoisting
+///// /\ parsing
+////  \/ execution
+console.log(boblin)
+
+boblin = 'something'
+
+console.log(boblin)
