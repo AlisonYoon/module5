@@ -31,16 +31,19 @@
     })
 
     var event = new CustomEvent(
-        'timeranout', {
-            bubbles: true,   // if bubbles: true then it will bubble and record its parents element event as well
-            cancelable: true,
+        'timeranout', {  // first param is the custom event name, second param is object and it's optional
+            bubbles: true,   // if bubbles: true then it will bubble and record its event as all of its parents. bubbling happens always in order. itself->direct parent->next parent->next parent
+            cancelable: true,   // it cancels the bubble
             detail: {
 
             }
         }
-    )
+    ) // this is preparing a new custom event
 
-    document.dispatchEvent(event)   // dispatchEvent is for CustomEvent
 
+
+    document.dispatchEvent(event)   // dispatchEvent is for CustomEvent. It triggers that custom event
+    document.addEventListener('timeranout', functionName, false)   // first param is the type of event, second param is the function you wanna run, third param is A Boolean indicating whether events of this type will be dispatched to the registered listener before being dispatched to any EventTarget beneath it in the DOM tree.
+                                                                    // if the third param 'dispatch event' is true, it will fire bubble back.
 </script>
 </html>
