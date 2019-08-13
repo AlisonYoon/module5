@@ -1,0 +1,49 @@
+<!--//Asynchronous JavaScript and XML-->
+
+<!--//Make request(such as HTTPS), while it's processing, you can do something else until it gets the response-->
+<!--//It doesn't have to be done from top to the bottom.-->
+
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Listener</title>
+<style>
+div {
+    background: blue;
+    width: 200px;
+    height: 200px;
+}
+.second-color {
+    background: red;
+}
+</style>
+</head>
+<body>
+<div id="fetch"></div>
+    <button id="fetch-data">click me</button>
+
+</body>
+<script>
+
+    document.getElementById('fetch-data').addEventListener('click', function(){
+        var http = new XMLHttpRequest()
+        // configuration
+        http.open('GET','https://jsonplaceholder.typicode.com/todos/1', true)  //first is what type of HTTP request we want, second is url, third is asynchronous true or false
+
+        // what to do when we get stuff back
+        http.onreadystatechange = function() {    // onreadystatechange is not camel cased. on ready state change, run this function. Here readyState must set to 4, and status must set to 200.
+            if(this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText)
+            }
+        }
+
+        // send the HTTP request
+        http.send()
+    })
+
+</script>
+</html>
