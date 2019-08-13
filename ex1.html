@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div></div>
+
+
+<!--  Create an array of objects containing a name and age. Output each persons name in a <p> with their age as a data attribute. -->
+</body>
+<script>
+    var nameAge = [{name : 'lala', age: 12}, {name: 'lulu', age: 13}, {name: 'lolo', age:14}, {name: 'peter', age: 15}]
+
+
+    var justDiv = document.querySelector('div')
+
+    nameAge.forEach(function(names){
+        justDiv.innerHTML += '<p>' + names.name + '</p>'
+    })
+
+    var selectP = document.querySelectorAll('p')
+
+    for(var i = 0; i < selectP.length; i++) {
+        selectP[i].dataset.age =  nameAge[i].age
+    }
+
+
+</script>
+</html>

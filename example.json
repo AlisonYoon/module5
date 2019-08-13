@@ -1,0 +1,19 @@
+//json javascript object notation. it's not a javascript object, but written like js object.
+
+{
+  "key": "value",
+  "secondKey": 34,
+  "thirdKey": [
+    0, "sdfad"
+  ],
+  "fourthKey" : true,
+  "fifthKey": null,
+  "sixthKey": {
+    "firstSubKey": "a different value"
+  }
+}
+
+<key>value</key>
+<secondKey>secondValue</secondKey>
+
+
