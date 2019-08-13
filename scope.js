@@ -32,11 +32,36 @@ doThing(someText)
 // if element it's manipulating doesn't exist yet, it will complain and throws an error
 
 
-var boblin      // hoisting
-///// /\ parsing
-////  \/ execution
+
+//Variables and anonymous functions are a bit hoisted (their existance is known). Named functions are fully hoisted
+var boblin
+var anonymousFunction
+function jurpy(doglin) {
+    // do a thing
+}
+/// /\ parsing
+/// \/ execution
 console.log(boblin)
 
-boblin = 'something'
+boblin = 'sjdhfgdjhfg'
 
 console.log(boblin)
+
+anonymousFunction = function (moglin) {
+    console.log(moglin)
+}
+
+function jurpy(doglin) {
+    // do a thing
+}
+
+
+
+//named function is fully hoisted
+var aString = 'asdf'
+
+jupy(aString)  // because named function is fully hoisted, you can call it wherever you want.
+
+function jupy(doglin){    // function exist below the function call, but it's ok
+    console.log(doglin)
+}
