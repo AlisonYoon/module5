@@ -25,3 +25,24 @@ try {
 //it knows how to deal with an error when it happens and the rest of the code still works fine.
 //things that is core in your program doesn't need to go into try catch because if this fails, there's no use of running rest of the code.
 
+var people = ['mike', 'Homer', 'charlie']
+
+try {
+    console.log(checkForHomers(people))
+} catch (e) {
+    console.log(e)
+}
+
+function checkForHomers(applicants){
+    var applicationSuccessful = true
+    applicants.forEach(function(applicants){
+        if(applicant === 'Homer') {
+            //applicationSuccessful = false
+            throw new Error('Homer detected')
+        }
+    })
+    return applicationSuccessful
+}
+
+checkForHomers(people)
+console.log('this is the end of file')
