@@ -10,7 +10,18 @@
 var someText = 'ooo'
 
 function doThing() {
-    console.log(someText)
+    console.log(someText)   // this is bad
 }
 
 doThing()
+
+
+
+// good
+var someText = 'ooooooo'
+
+function doThing(name) {
+    console.log(name)
+}
+
+doThing(someText)
