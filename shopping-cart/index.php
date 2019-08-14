@@ -8,7 +8,15 @@
     <title>Shopping List</title>
 </head>
 <body>
+<h1>Shopping list</h1>
+<form action="index.php" method="post">
+    <label for="item">Add item</label>
+    <input type="text" name="item" id="item">
+    <input type="submit">
+</form>
+<ul id="list">
 
+</ul>
 </body>
 <script src="script.js"></script>
 </html>
