@@ -3,7 +3,7 @@
 //HTTPRequest() as well, JS doesn't know what to do with it itself.
 //JS doesn't know time either, so it has to reach out to something who knows the time to get the time. (setTimeout)
 //anything outside of the language is JS. such as document, DOM.
-
+// because you run JS in the browser, it has access to Web API. browsers has JS methods it can use, have access to.
 
 //do something after a period of time has passed
 //but don't stop the rest of the app from running
@@ -47,6 +47,16 @@ function step(timestamp) {
 }
 
 requestAnimationFrame(step)
+
+
+//this gets computer's location
+navigator.geolocation.getCurrentPosition(function(position){
+    console.log(position)
+})
+
+console.log(navigator.geolocation)  // navigator.geolocation got all the info of current position, speed, etc
+
+
 
 
 
