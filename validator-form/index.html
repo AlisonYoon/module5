@@ -9,7 +9,7 @@
 
     <title>Form validation challenge</title>
     <style>
-        #requiredError, #maxLengthError, #minMaxLengthError {
+        #requiredError, #maxLengthError, #minMaxLengthError, #minMaxLengthNotRequiredError {
             color: #ff2c48;
         }
     </style>
@@ -37,7 +37,8 @@
                 </div>
                 <div class="form-group">
                     <label>Not required - Min length 10 - Max length 25:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="minMaxLengthNotRequired">
+                    <p id="minMaxLengthNotRequiredError"></p>
                 </div>
                 <div class="form-group">
                     <label>Letters only:</label>

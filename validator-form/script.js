@@ -2,11 +2,13 @@ var form = document.getElementById('validForm')
 var requiredError = document.getElementById("requiredError")
 var maxLengthError = document.getElementById("maxLengthError")
 var minMaxLengthError = document.getElementById("minMaxLengthError")
+var minMaxLengthNotRequiredError = document.getElementById("minMaxLengthNotRequiredError")
 
 function validateFunction() {
     var requiredInputValue = document.getElementById("requiredInput").value
     var maxLengthValue = document.getElementById("maxLength").value
     var minMaxLengthValue = document.getElementById("minMaxLength").value
+    var minMaxLengthNotRequiredValue = document.getElementById("minMaxLengthNotRequired").value
 
     if(requiredInputValue === ""){
         requiredError.innerText = "Please fill this in"
@@ -24,10 +26,15 @@ function validateFunction() {
         minMaxLengthError.innerText = "This is required field"
     } else {
         if(minMaxLengthValue.length < 11 || minMaxLengthValue.length > 26) {
-            minMaxLengthError.innerText = "Minimum 10 characters, maximum 25 characters"
+            minMaxLengthError.innerText = "It should be at least 10 characters, maximum 25 characters"
         } else{
             minMaxLengthError.innerText = ""
         }
+    }
 
+    if(minMaxLengthNotRequiredValue.length < 11 || minMaxLengthNotRequiredValue.length > 26){
+        minMaxLengthNotRequiredError.innerText = "Enter at least 10 characters, maximum 25 characters"
+    } else {
+        minMaxLengthNotRequiredError.innerText = ""
     }
 }
