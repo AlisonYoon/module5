@@ -1,6 +1,9 @@
 <!--jQuery is a JavaScript library-->
 <!--it gives you different way of writing things, different functions if you wanna use them-->
-<!--Framework has a different way of writing things and you must follow it-->
+<!--Framework has a different way of writing things and you must follow it
+
+jQuery is a syntatic sugar, it's easy to read and write
+-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,5 +17,19 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- jQuery file goes to the bottom to prevent render blocking -->
+<script>
+    $(document).ready(function(){
+        // do something when the DOM has finished loading
+    })
+    $(function(){
+        // do something when the DOM has finished loading
+    })
+
+    $('#thing')
+    //is the same as
+    document.querySelector('#thing')
+    document.getElementById('thing')
+
+</script>
 </body>
 </html>
