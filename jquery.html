@@ -88,7 +88,28 @@ jQuery is a syntatic sugar, it's easy to read and write
     $('#display').before('<p>oooooo</p>')
 
     //.after(string), create next sibling that contains "string"
-    $('#display').after('<p>oooooo</p>')
+    $('#display').after('<p>eeeeee</p>')
+
+    //.hide() is basically CSS display: none
+    $('#display').hide()
+
+    //.show() is basically CSS display: block or back to the original display value the element has.
+    $('#display').show()
+
+    //Completely remove an element from the DOM
+    $('#click-me').on('click', function () {
+        $('#display').remove()
+    })
+
+    //Moving things around
+    $("button").click(function(){
+        var $movey = $("div")
+        $movey.animate({left: '250px'}, 2000)
+        $movey.slideUp(function () {
+            $movey.css('background-color', 'red')
+        })
+        $movey.slideDown()
+    })
 
 
 
