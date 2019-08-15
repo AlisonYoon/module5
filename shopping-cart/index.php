@@ -12,8 +12,7 @@
 <form action="index.php" method="post">
     <label for="item">Add item</label>
     <input type="text" name="item" id="item">
-    <button id="addItem">Add</button>
-<!--    <input type="submit">-->
+    <input type="submit" value="Add">
 </form>
 <ul id="list">
 
