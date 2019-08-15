@@ -14,9 +14,19 @@ form.addEventListener("submit", function(event) {
   li.className = "dynamic-item";
   list.appendChild(li);
   li.innerHTML +=
-    json.replace(/['"]+/g, "") + '<button class="delete">delete</button>';
+    json.replace(/['"]+/g, "");
   form.reset();
+  btn.className = 'delete-btn'
+    btn.innerHTML += ''
+  li.appendChild(btn)
+    btn.onclick = deleteItem()
 });
+
+(function(){
+
+
+})()
+
 
 var deleteBtn = document.getElementByClassName("delete");
 console.log(deleteBtn);
