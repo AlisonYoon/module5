@@ -1,7 +1,7 @@
 var form = document.querySelector("form");
 var list = document.getElementById("list");
-var li = document.createElement("li");
-var btn = document.createElement("button");
+
+
 
 //https://ultimatecourses.com/blog/attaching-event-handlers-to-dynamically-created-javascript-elements
 
@@ -11,18 +11,20 @@ var btn = document.createElement("button");
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
-    var shoppingList = {};
-    shoppingList = form.item.value;
-
-    var json = JSON.stringify(shoppingList);
-    li.className = "dynamic-item";
+    // var shoppingList = {};
+    var shoppingList = form.item.value;
+    // var json = JSON.stringify(shoppingList);
+    var li = document.createElement("li");
     list.appendChild(li);
-    li.innerHTML +=
-        json.replace(/['"]+/g, "");
+    li.className = "dynamic-item";
+    li.innerHTML += shoppingList
+        // json.replace(/['"]+/g, "");
     form.reset();
+    var btn = document.createElement("button");
     btn.className = 'delete-btn'
-    btn.innerHTML += 'delete'
+    btn.innerHTML = 'delete'
     li.appendChild(btn)
+
     //btn.onclick = deleteItem(e)
     var newBtn = document.getElementsByClassName('delete-btn')
 
