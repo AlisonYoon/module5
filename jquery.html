@@ -55,7 +55,15 @@ jQuery is a syntatic sugar, it's easy to read and write
         success: function(responseData) {
             console.log(responseData)
         }
-    })  // is a simple POST(you chose POST). You don't need XMLHttpRequest(), JSON.stringify() like in JavaScript.
+    })  // is a POST where we send some stuff to the server and logs the response when we receive it
+
+    $('#unicorn').load('other.html')
+    // retrieves an HTML file,
+    // parses it and updates
+    // the element in the page with results
+
+
+
 
 </script>
 </body>
