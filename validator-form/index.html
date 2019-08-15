@@ -9,7 +9,7 @@
 
     <title>Form validation challenge</title>
     <style>
-        #requiredError {
+        #requiredError, #maxLengthError {
             color: #ff2c48;
         }
     </style>
@@ -22,12 +22,13 @@
             <form id="validForm">
                 <div class="form-group">
                     <label>Required field:</label>
-                    <input type="text" class="form-control" name="required" id="requiredInput">
+                    <input type="text" class="form-control" id="requiredInput">
                     <p id="requiredError"></p>
                 </div>
                 <div class="form-group">
                     <label>Max length 8:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="maxLength">
+                    <p id="maxLengthError"></p>
                 </div>
                 <div class="form-group">
                     <label>Required - Min length 10 - Max length 25:</label>
