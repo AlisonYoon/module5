@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h1>Join the mailing list</h1>
-				<form>
+				<form id="theForm">
 					<div class="form-group">
 						<label>Name:</label>
 						<input type="text" name="name" class="form-control">
@@ -71,5 +71,9 @@
 	<div id="optional">
 	</div>
 </body>
-<script src="json-packer.js"></script>
+<!--<script src="json-packer.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--use $.load to grab the contents part.html and insert it into the #optional div-->
+
+<script src="ajax.js"></script>
 </html>
