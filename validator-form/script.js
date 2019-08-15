@@ -20,9 +20,14 @@ function validateFunction() {
         maxLengthError.innerText = ""
     }
 
-    if(minMaxLengthValue.length < 11 || minMaxLengthValue.length > 26) {
-        minMaxLengthError.innerText = "Minimum 10 characters, maximum 25 characters"
+    if(minMaxLengthValue === "") {
+        minMaxLengthError.innerText = "This is required field"
     } else {
-        minMaxLengthError.innerText = ""
+        if(minMaxLengthValue.length < 11 || minMaxLengthValue.length > 26) {
+            minMaxLengthError.innerText = "Minimum 10 characters, maximum 25 characters"
+        } else{
+            minMaxLengthError.innerText = ""
+        }
+
     }
 }
