@@ -14,7 +14,7 @@ function validateFunction() {
     var minMaxLengthValue = document.getElementById("minMaxLength").value
     var minMaxLengthNotRequiredValue = document.getElementById("minMaxLengthNotRequired").value
     var lettersOnlyValue = document.getElementById("lettersOnly").value
-    var radioYesValue = document.form.required.value
+    //var radioYesValue = document.form.required.value
     var emailValue = document.getElementById('email').value
 
     if(requiredInputValue === ""){
@@ -60,6 +60,5 @@ function validateFunction() {
         }
     }
 
-    console.log(radioYesValue)
 
-}
+}  //validateFunction end
