@@ -6,6 +6,7 @@ var minMaxLengthNotRequiredError = document.getElementById("minMaxLengthNotRequi
 var lettersOnlyError = document.getElementById("lettersOnlyError")
 var letters = /^[A-Za-z]+$/;
 var radioYesRequiredError = document.getElementById("radioYesRequiredError")
+var emailError = document.getElementById('emailError')
 
 function validateFunction() {
     var requiredInputValue = document.getElementById("requiredInput").value
@@ -14,6 +15,7 @@ function validateFunction() {
     var minMaxLengthNotRequiredValue = document.getElementById("minMaxLengthNotRequired").value
     var lettersOnlyValue = document.getElementById("lettersOnly").value
     var radioYesValue = document.form.required.value
+    var emailValue = document.getElementById('email').value
 
     if(requiredInputValue === ""){
         requiredError.innerText = "*Please fill this in"
