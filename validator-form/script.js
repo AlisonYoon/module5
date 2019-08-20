@@ -14,8 +14,14 @@ function validateFunction() {
     var minMaxLengthValue = document.getElementById("minMaxLength").value
     var minMaxLengthNotRequiredValue = document.getElementById("minMaxLengthNotRequired").value
     var lettersOnlyValue = document.getElementById("lettersOnly").value
-    //var radioYesValue = document.form.required.value
+    var radioValue = document.querySelector('input[name="required"]:checked')
+    if (radioValue == null) {
+        var radioCheckedValue = null
+    } else {
+        var radioCheckedValue = document.querySelector('input[name="required"]:checked').value
+    }
     var emailValue = document.getElementById('email').value
+    var ifRadioYesValue = document.getElementById('ifRadioYes').value
 
     if(requiredInputValue === ""){
         requiredError.innerText = "*Please fill this in"
@@ -69,6 +75,15 @@ function validateFunction() {
             emailError.innerText = "Please type valid email"
         }
     }
+
+    if(radioCheckedValue == 1) {
+        if(ifRadioYesValue === "") {
+            radioYesRequiredError.innerText = "Please fill out this input"
+        } else {
+            radioYesRequiredError.innerText = ""
+        }
+    }
+
 
 
 }  //validateFunction end

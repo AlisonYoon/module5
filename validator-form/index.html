@@ -9,7 +9,7 @@
 
     <title>Form validation challenge</title>
     <style>
-        #requiredError, #maxLengthError, #minMaxLengthError, #minMaxLengthNotRequiredError, #lettersOnlyError, #emailError {
+        #requiredError, #maxLengthError, #minMaxLengthError, #minMaxLengthNotRequiredError, #lettersOnlyError, #radioYesRequiredError, #emailError {
             color: #ff2c48;
         }
     </style>
@@ -45,14 +45,14 @@
                     <input type="text" class="form-control" id="lettersOnly">
                     <p id="lettersOnlyError"></p>
                 </div>
-                <div class="radio">
+                <div class="radio" id="radio">
                     <strong>Not required:</strong><br>
                     <label><input type="radio" name="required" value="1" id="radioYes"> Yes</label>
                     <label><input type="radio" name="required" value="0" id="radioNo"> No</label>
                 </div>
                 <div class="form-group">
                     <label>Required if above field is Yes:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="ifRadioYes">
                     <p id="radioYesRequiredError"></p>
                 </div>
                 <div class="form-group">
