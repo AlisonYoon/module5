@@ -83,7 +83,5 @@ function validateFunction() {
             radioYesRequiredError.innerText = ""
         }
     }
-
-
-
-}  //validateFunction end
+}
+document.getElementById('validate-btn').onclick = validateFunction
